@@ -20,7 +20,7 @@ class GithubService {
           description: repo['description'] ?? "No description available",
           projectUrl: repo['html_url'],
           imageUrl:
-          "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+          "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", techStack: [],
         );
       }).toList();
     } else {

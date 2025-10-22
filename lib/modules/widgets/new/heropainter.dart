@@ -1,6 +1,7 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'dart:math' as math;
 
 class HeroBoxWithAnimatedIcons extends StatefulWidget {
   final ThemeMode themeMode;
@@ -9,35 +10,33 @@ class HeroBoxWithAnimatedIcons extends StatefulWidget {
   const HeroBoxWithAnimatedIcons({
     Key? key,
     required this.themeMode,
-    this.size = 220,
+    this.size = 240,
   }) : super(key: key);
 
   @override
   State<HeroBoxWithAnimatedIcons> createState() => _HeroBoxWithAnimatedIconsState();
 }
 
-class _HeroBoxWithAnimatedIconsState extends State<HeroBoxWithAnimatedIcons>
-    with SingleTickerProviderStateMixin {
+class _HeroBoxWithAnimatedIconsState extends State<HeroBoxWithAnimatedIcons> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-
-  final List<IconData> icons = [
-    FontAwesomeIcons.android,
-    FontAwesomeIcons.apple,
-    FontAwesomeIcons.chrome,
-    FontAwesomeIcons.windows,
-    FontAwesomeIcons.flutter,
-    FontAwesomeIcons.github,
-    FontAwesomeIcons.fireFlameCurved
-
-  ];
+  late Animation<double> _floatAnimation;
 
   @override
   void initState() {
     super.initState();
+
     _controller = AnimationController(
+      duration: const Duration(seconds: 4),
       vsync: this,
-      duration: const Duration(seconds: 8),
-    )..repeat();
+    )..repeat(reverse: true);
+
+    _floatAnimation = Tween<double>(
+      begin: -10.0,
+      end: 10.0,
+    ).animate(CurvedAnimation(
+      parent: _controller,
+      curve: Curves.easeInOut,
+    ));
   }
 
   @override
@@ -46,88 +45,198 @@ class _HeroBoxWithAnimatedIconsState extends State<HeroBoxWithAnimatedIcons>
     super.dispose();
   }
 
-  Offset _calculateEdgePosition(double progress, double boxSize) {
-    // progress 0.0 -> 1.0
-    double perimeter = boxSize * 4; // approx rectangle loop
-    double distance = perimeter * progress;
-
-    if (distance <= boxSize) {
-      return Offset(distance, 0); // top edge
-    } else if (distance <= boxSize * 2) {
-      return Offset(boxSize, distance - boxSize); // right edge
-    } else if (distance <= boxSize * 3) {
-      return Offset(boxSize - (distance - boxSize * 2), boxSize); // bottom edge
-    } else {
-      return Offset(0, boxSize - (distance - boxSize * 3)); // left edge
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     final bool isDark = widget.themeMode == ThemeMode.dark;
-    final Color boxColor = isDark ? Colors.deepOrange[800]! : Colors.orange;
 
-    return SizedBox(
+    return Container(
       width: widget.size,
-      height: widget.size,
-      child: Stack(
-        alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: isDark ? Colors.grey[900] : Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            blurRadius: 20,
+            offset: const Offset(0, 10),
+          ),
+        ],
+        border: Border.all(
+          color: Colors.grey.withOpacity(0.2),
+          width: 1,
+        ),
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
-          // Frame box
+          // Profile Image Section with Floating Animation
           Container(
             width: widget.size,
             height: widget.size,
             decoration: BoxDecoration(
-              color: boxColor,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.2),
-                  blurRadius: 3,
-                  offset: const Offset(0, 6),
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+              ),
+            ),
+            child: Stack(
+              children: [
+                // Animated Profile Image
+                AnimatedBuilder(
+                  animation: _floatAnimation,
+                  builder: (context, child) {
+                    return Transform.translate(
+                      offset: Offset(0, _floatAnimation.value),
+                      child: Center(
+                        child: Container(
+                          width: widget.size - 40,
+                          height: widget.size - 40,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: Colors.white,
+                              width: 4,
+                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.3),
+                                blurRadius: 15,
+                                offset: Offset(0, 5 + _floatAnimation.value.abs() * 0.5),
+                              ),
+                              BoxShadow(
+                                color: Colors.blue.withOpacity(0.2),
+                                blurRadius: 20,
+                                spreadRadius: 2,
+                                offset: Offset(0, 3 + _floatAnimation.value.abs() * 0.3),
+                              ),
+                            ],
+                            gradient: RadialGradient(
+                              colors: [
+                                Colors.blue.withOpacity(0.1),
+                                Colors.transparent,
+                              ],
+                              radius: 0.8,
+                            ),
+                          ),
+                          child: ClipOval(
+                            child: Image.asset(
+                              "assets/images/abdullah.png",
+                              fit: BoxFit.cover,
+                              errorBuilder: (context, error, stackTrace) => Container(
+                                color: Colors.grey[300],
+                                child: Icon(
+                                  Icons.person,
+                                  size: 60,
+                                  color: Colors.grey[600],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                  },
                 ),
+
+                // Floating Particles Effect
+                ..._buildFloatingParticles(),
               ],
             ),
-          ),
-
-          // Profile Image in center
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image.asset(
-              "assets/images/abdullah.png",
-              fit: BoxFit.cover,
-              width: widget.size - 10,
-              height: widget.size - 10,
-              errorBuilder: (context, error, stackTrace) =>
-              const Icon(Icons.person, size: 80, color: Colors.white),
-            ),
-          ),
-
-          // Animated edge-following icons
-          AnimatedBuilder(
-            animation: _controller,
-            builder: (context, child) {
-              List<Widget> edgeIcons = [];
-              for (int i = 0; i < icons.length; i++) {
-                double progress =
-                    (_controller.value + i / icons.length) % 1.0; // offset start
-                Offset pos = _calculateEdgePosition(progress, widget.size - 24);
-
-                edgeIcons.add(Positioned(
-                  left: pos.dx,
-                  top: pos.dy,
-                  child: Icon(
-                    icons[i],
-                    color: Colors.black,
-                    size: 25,
-                  ),
-                ));
-              }
-              return Stack(children: edgeIcons);
-            },
           ),
         ],
       ),
     );
+  }
+
+  List<Widget> _buildFloatingParticles() {
+    return [
+      // Top Left Particle
+      Positioned(
+        top: 30,
+        left: 30,
+        child: AnimatedBuilder(
+          animation: _controller,
+          builder: (context, child) {
+            return Transform.translate(
+              offset: Offset(0, math.sin(_controller.value * 2 * math.pi) * 8),
+              child: Container(
+                width: 6,
+                height: 6,
+                decoration: BoxDecoration(
+                  color: Colors.blue.withOpacity(0.6),
+                  shape: BoxShape.circle,
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+
+      // Top Right Particle
+      Positioned(
+        top: 40,
+        right: 40,
+        child: AnimatedBuilder(
+          animation: _controller,
+          builder: (context, child) {
+            return Transform.translate(
+              offset: Offset(0, math.sin(_controller.value * 2 * math.pi + 1) * 6),
+              child: Container(
+                width: 4,
+                height: 4,
+                decoration: BoxDecoration(
+                  color: Colors.purple.withOpacity(0.6),
+                  shape: BoxShape.circle,
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+
+      // Bottom Left Particle
+      Positioned(
+        bottom: 50,
+        left: 50,
+        child: AnimatedBuilder(
+          animation: _controller,
+          builder: (context, child) {
+            return Transform.translate(
+              offset: Offset(0, math.sin(_controller.value * 2 * math.pi + 2) * 10),
+              child: Container(
+                width: 5,
+                height: 5,
+                decoration: BoxDecoration(
+                  color: Colors.orange.withOpacity(0.6),
+                  shape: BoxShape.circle,
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+
+      // Bottom Right Particle
+      Positioned(
+        bottom: 30,
+        right: 30,
+        child: AnimatedBuilder(
+          animation: _controller,
+          builder: (context, child) {
+            return Transform.translate(
+              offset: Offset(0, math.sin(_controller.value * 2 * math.pi + 3) * 7),
+              child: Container(
+                width: 3,
+                height: 3,
+                decoration: BoxDecoration(
+                  color: Colors.green.withOpacity(0.6),
+                  shape: BoxShape.circle,
+                ),
+              ),
+            );
+          },
+        ),
+      ),
+    ];
   }
 }

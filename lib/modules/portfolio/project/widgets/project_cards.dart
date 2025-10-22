@@ -9,7 +9,7 @@ class ProjectCard extends StatelessWidget {
   final Project project;
   final Color textColor;
 
-  const ProjectCard({Key? key, required this.project, required this.textColor})
+  const ProjectCard({Key? key, required this.project, required this.textColor, required ThemeMode themeMode})
       : super(key: key);
 
   Future<void> _launchUrl(String url) async {

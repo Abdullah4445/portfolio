@@ -10,7 +10,7 @@ class FunFactCard extends StatelessWidget {
     Key? key,
     required this.number,
     required this.text,
-    required this.icon,
+    required this.icon, required Color color, required ThemeMode themeMode,
   }) : super(key: key);
 
   @override

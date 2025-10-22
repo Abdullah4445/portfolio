@@ -33,7 +33,7 @@ class ContactInfo extends StatelessWidget {
         ListTile(
           leading: Icon(Icons.phone, color: textColor),
           title: Text(
-            "+92 301 7832945",
+            "+92 327 1774145",
             style: GoogleFonts.poppins(color: textColor, fontSize: 16),
           ),
         ),

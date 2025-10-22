@@ -17,7 +17,7 @@ class EducationEntry extends StatelessWidget {
     required this.description,
     required this.textColor,
     required this.secondaryTextColor,
-    required this.tertiaryTextColor,
+    required this.tertiaryTextColor, required List<ColorSwatch<int>> gradientColors, required IconData icon,
   }) : super(key: key);
 
   @override

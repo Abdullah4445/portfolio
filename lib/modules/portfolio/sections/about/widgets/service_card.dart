@@ -12,7 +12,7 @@ class ServiceCard extends StatelessWidget {
     required this.title,
     required this.description,
     required this.icon,
-    required this.themeMode,
+    required this.themeMode, required List<Color> gradientColors,
   }) : super(key: key);
 
   @override

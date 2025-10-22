@@ -11,7 +11,7 @@ class PersonalSkillBar extends StatefulWidget {
     required this.skillName,
     required this.progress,
     required this.textColor,
-    required this.progressBackgroundColor,
+    required this.progressBackgroundColor, required IconData icon, required MaterialColor color,
   }) : super(key: key);
 
   @override

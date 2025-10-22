@@ -15,7 +15,7 @@ class CircularSkillIndicator extends StatefulWidget {
     required this.percentage,
     this.colors = const [Colors.green, Colors.lightGreen],
     required this.textColor,
-    required this.progressBackgroundColor,
+    required this.progressBackgroundColor, required IconData icon,
   }) : super(key: key);
 
   @override
