@@ -1,6 +1,6 @@
 // import 'package:flutter/material.dart';
 // import 'dart:math'
-//     as math; // For mathematical operations like sin/cos for circular progress
+// as math; // For mathematical operations like sin/cos for circular progress
 //
 // // This is the main skills and experience section widget for your portfolio.
 // class SkillsAndExperienceSection extends StatelessWidget {
@@ -84,13 +84,13 @@
 //                           university: 'Graduate College Degree  (Ongoing)',
 //                           years: 'Present',
 //                           description:
-//                               'Focusing on core subjects and building foundational knowledge. Actively exploring career paths in technology.',
+//                           'Focusing on core subjects and building foundational knowledge. Actively exploring career paths in technology.',
 //                           textColor: textColor,
 //                           // Pass text color
 //                           secondaryTextColor: secondaryTextColor,
 //                           // Pass secondary text color
 //                           tertiaryTextColor:
-//                               tertiaryTextColor, // Pass tertiary text color
+//                           tertiaryTextColor, // Pass tertiary text color
 //                         ),
 //                         const SizedBox(height: 24),
 //                         _EducationEntry(
@@ -99,13 +99,13 @@
 //                           // Updated to AiLab Solutions
 //                           years: 'Late 2023 - Present',
 //                           description:
-//                               'Began learning Flutter in late 2023 at AiLab Solutions. Gained proficiency in Dart, UI/UX design, and building cross-platform mobile applications.',
+//                           'Began learning Flutter in late 2023 at AiLab Solutions. Gained proficiency in Dart, UI/UX design, and building cross-platform mobile applications.',
 //                           textColor: textColor,
 //                           // Pass text color
 //                           secondaryTextColor: secondaryTextColor,
 //                           // Pass secondary text color
 //                           tertiaryTextColor:
-//                               tertiaryTextColor, // Pass tertiary text color
+//                           tertiaryTextColor, // Pass tertiary text color
 //                         ),
 //                         const SizedBox(height: 24),
 //                         _EducationEntry(
@@ -113,13 +113,13 @@
 //                           university: 'Continuous Learning',
 //                           years: 'Ongoing',
 //                           description:
-//                               'Continuously learning advanced Flutter topics including state management, animations, and performance optimization.',
+//                           'Continuously learning advanced Flutter topics including state management, animations, and performance optimization.',
 //                           textColor: textColor,
 //                           // Pass text color
 //                           secondaryTextColor: secondaryTextColor,
 //                           // Pass secondary text color
 //                           tertiaryTextColor:
-//                               tertiaryTextColor, // Pass tertiary text color
+//                           tertiaryTextColor, // Pass tertiary text color
 //                         ),
 //                       ],
 //                     ),
@@ -146,28 +146,28 @@
 //                           progress: 0.9,
 //                           textColor: textColor, // Pass text color
 //                           progressBackgroundColor:
-//                               progressBackgroundColor, // Pass background color
+//                           progressBackgroundColor, // Pass background color
 //                         ),
 //                         _PersonalSkillBar(
 //                           skillName: 'Adaptability',
 //                           progress: 0.85,
 //                           textColor: textColor, // Pass text color
 //                           progressBackgroundColor:
-//                               progressBackgroundColor, // Pass background color
+//                           progressBackgroundColor, // Pass background color
 //                         ),
 //                         _PersonalSkillBar(
 //                           skillName: 'Teamwork',
 //                           progress: 0.95,
 //                           textColor: textColor, // Pass text color
 //                           progressBackgroundColor:
-//                               progressBackgroundColor, // Pass background color
+//                           progressBackgroundColor, // Pass background color
 //                         ),
 //                         _PersonalSkillBar(
 //                           skillName: 'Communication',
 //                           progress: 0.88,
 //                           textColor: textColor, // Pass text color
 //                           progressBackgroundColor:
-//                               progressBackgroundColor, // Pass background color
+//                           progressBackgroundColor, // Pass background color
 //                         ),
 //                         const SizedBox(height: 40),
 //
@@ -195,7 +195,7 @@
 //                               textColor: textColor,
 //                               // Pass text color
 //                               progressBackgroundColor:
-//                                   progressBackgroundColor, // Pass background color
+//                               progressBackgroundColor, // Pass background color
 //                             ),
 //                             _CircularSkillIndicator(
 //                               skillName: 'Dart',
@@ -208,7 +208,7 @@
 //                               textColor: textColor,
 //                               // Pass text color
 //                               progressBackgroundColor:
-//                                   progressBackgroundColor, // Pass background color
+//                               progressBackgroundColor, // Pass background color
 //                             ),
 //                             _CircularSkillIndicator(
 //                               skillName: 'Firebase',
@@ -221,7 +221,7 @@
 //                               textColor: textColor,
 //                               // Pass text color
 //                               progressBackgroundColor:
-//                                   progressBackgroundColor, // Pass background color
+//                               progressBackgroundColor, // Pass background color
 //                             ),
 //                           ],
 //                         ),
@@ -240,7 +240,7 @@
 //                               textColor: textColor,
 //                               // Pass text color
 //                               progressBackgroundColor:
-//                                   progressBackgroundColor, // Pass background color
+//                               progressBackgroundColor, // Pass background color
 //                             ),
 //                             _CircularSkillIndicator(
 //                               skillName: 'Git',
@@ -253,7 +253,7 @@
 //                               textColor: textColor,
 //                               // Pass text color
 //                               progressBackgroundColor:
-//                                   progressBackgroundColor, // Pass background color
+//                               progressBackgroundColor, // Pass background color
 //                             ),
 //                             _CircularSkillIndicator(
 //                               skillName: 'UI/UX Design',
@@ -266,7 +266,7 @@
 //                               textColor: textColor,
 //                               // Pass text color
 //                               progressBackgroundColor:
-//                                   progressBackgroundColor, // Pass background color
+//                               progressBackgroundColor, // Pass background color
 //                             ),
 //                           ],
 //                         ),
@@ -301,13 +301,13 @@
 //                             university: 'Graduate College Degree (Ongoing)',
 //                             years: 'Present',
 //                             description:
-//                                 'Focusing on core subjects and building foundational knowledge. Actively exploring career paths in technology.',
+//                             'Focusing on core subjects and building foundational knowledge. Actively exploring career paths in technology.',
 //                             textColor: textColor,
 //                             // Pass text color
 //                             secondaryTextColor: secondaryTextColor,
 //                             // Pass secondary text color
 //                             tertiaryTextColor:
-//                                 tertiaryTextColor, // Pass tertiary text color
+//                             tertiaryTextColor, // Pass tertiary text color
 //                           ),
 //                           const SizedBox(height: 24),
 //                           _EducationEntry(
@@ -316,13 +316,13 @@
 //                             // Updated to AiLab Solutions
 //                             years: 'Late 2023 - Present',
 //                             description:
-//                                 'Began learning Flutter in late 2023 at AiLab Solutions. Gained proficiency in Dart, UI/UX design, and building cross-platform mobile applications.',
+//                             'Began learning Flutter in late 2023 at AiLab Solutions. Gained proficiency in Dart, UI/UX design, and building cross-platform mobile applications.',
 //                             textColor: textColor,
 //                             // Pass text color
 //                             secondaryTextColor: secondaryTextColor,
 //                             // Pass secondary text color
 //                             tertiaryTextColor:
-//                                 tertiaryTextColor, // Pass tertiary text color
+//                             tertiaryTextColor, // Pass tertiary text color
 //                           ),
 //                           const SizedBox(height: 24),
 //                           _EducationEntry(
@@ -330,13 +330,13 @@
 //                             university: 'Continuous Learning',
 //                             years: 'Ongoing',
 //                             description:
-//                                 'Continuously learning advanced Flutter topics including state management, animations, and performance optimization.',
+//                             'Continuously learning advanced Flutter topics including state management, animations, and performance optimization.',
 //                             textColor: textColor,
 //                             // Pass text color
 //                             secondaryTextColor: secondaryTextColor,
 //                             // Pass secondary text color
 //                             tertiaryTextColor:
-//                                 tertiaryTextColor, // Pass tertiary text color
+//                             tertiaryTextColor, // Pass tertiary text color
 //                           ),
 //                         ],
 //                       ),
@@ -364,28 +364,28 @@
 //                             progress: 0.9,
 //                             textColor: textColor, // Pass text color
 //                             progressBackgroundColor:
-//                                 progressBackgroundColor, // Pass background color
+//                             progressBackgroundColor, // Pass background color
 //                           ),
 //                           _PersonalSkillBar(
 //                             skillName: 'Adaptability',
 //                             progress: 0.85,
 //                             textColor: textColor, // Pass text color
 //                             progressBackgroundColor:
-//                                 progressBackgroundColor, // Pass background color
+//                             progressBackgroundColor, // Pass background color
 //                           ),
 //                           _PersonalSkillBar(
 //                             skillName: 'Teamwork',
 //                             progress: 0.95,
 //                             textColor: textColor, // Pass text color
 //                             progressBackgroundColor:
-//                                 progressBackgroundColor, // Pass background color
+//                             progressBackgroundColor, // Pass background color
 //                           ),
 //                           _PersonalSkillBar(
 //                             skillName: 'Communication',
 //                             progress: 0.88,
 //                             textColor: textColor, // Pass text color
 //                             progressBackgroundColor:
-//                                 progressBackgroundColor, // Pass background color
+//                             progressBackgroundColor, // Pass background color
 //                           ),
 //                           const SizedBox(height: 40),
 //
@@ -414,7 +414,7 @@
 //                                 textColor: textColor,
 //                                 // Pass text color
 //                                 progressBackgroundColor:
-//                                     progressBackgroundColor, // Pass background color
+//                                 progressBackgroundColor, // Pass background color
 //                               ),
 //                               _CircularSkillIndicator(
 //                                 skillName: 'Dart',
@@ -427,7 +427,7 @@
 //                                 textColor: textColor,
 //                                 // Pass text color
 //                                 progressBackgroundColor:
-//                                     progressBackgroundColor, // Pass background color
+//                                 progressBackgroundColor, // Pass background color
 //                               ),
 //                               _CircularSkillIndicator(
 //                                 skillName: 'Firebase',
@@ -440,7 +440,7 @@
 //                                 textColor: textColor,
 //                                 // Pass text color
 //                                 progressBackgroundColor:
-//                                     progressBackgroundColor, // Pass background color
+//                                 progressBackgroundColor, // Pass background color
 //                               ),
 //                             ],
 //                           ),
@@ -459,7 +459,7 @@
 //                                 textColor: textColor,
 //                                 // Pass text color
 //                                 progressBackgroundColor:
-//                                     progressBackgroundColor, // Pass background color
+//                                 progressBackgroundColor, // Pass background color
 //                               ),
 //                               _CircularSkillIndicator(
 //                                 skillName: 'Git',
@@ -472,7 +472,7 @@
 //                                 textColor: textColor,
 //                                 // Pass text color
 //                                 progressBackgroundColor:
-//                                     progressBackgroundColor, // Pass background color
+//                                 progressBackgroundColor, // Pass background color
 //                               ),
 //                               _CircularSkillIndicator(
 //                                 skillName: 'UI/UX Design',
@@ -485,7 +485,7 @@
 //                                 textColor: textColor,
 //                                 // Pass text color
 //                                 progressBackgroundColor:
-//                                     progressBackgroundColor, // Pass background color
+//                                 progressBackgroundColor, // Pass background color
 //                               ),
 //                             ],
 //                           ),
@@ -604,7 +604,7 @@
 //                     university,
 //                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
 //                       color:
-//                           secondaryTextColor, // Use passed secondaryTextColor
+//                       secondaryTextColor, // Use passed secondaryTextColor
 //                     ),
 //                   ),
 //                   Text(
@@ -671,11 +671,11 @@
 //
 //     _progressAnimation = Tween<double>(begin: 0.0, end: widget.progress)
 //         .animate(
-//           CurvedAnimation(
-//             parent: _progressController,
-//             curve: Curves.easeOutCubic,
-//           ),
-//         );
+//       CurvedAnimation(
+//         parent: _progressController,
+//         curve: Curves.easeOutCubic,
+//       ),
+//     );
 //
 //     // Define a sequence of colors for the animation
 //     _colorAnimation =
@@ -840,11 +840,11 @@
 //                         '${widget.percentage}%',
 //                         style: Theme.of(context).textTheme.titleMedium
 //                             ?.copyWith(
-//                               fontWeight: FontWeight.bold,
-//                               color: Colors
-//                                   .green
-//                                   .shade700, // Darker green for contrast
-//                             ),
+//                           fontWeight: FontWeight.bold,
+//                           color: Colors
+//                               .green
+//                               .shade700, // Darker green for contrast
+//                         ),
 //                       ),
 //                     ),
 //                   ),
@@ -923,40 +923,3 @@
 //   }
 // }
 //
-// // How to use this code in a main application (for testing purposes)
-// // void main() {
-// //   runApp(const MyApp());
-// // }
-//
-// // class MyApp extends StatelessWidget {
-// //   const MyApp({Key? key}) : super(key: key);
-//
-// //   @override
-// //   Widget build(BuildContext context) {
-// //     return MaterialApp(
-// //       title: 'Skills and Experience Demo',
-// //       theme: ThemeData(
-// //         primarySwatch: Colors.deepPurple,
-// //         fontFamily: 'Roboto', // Example font family
-// //         // Define light and dark themes for demonstration
-// //         // lightTheme: ThemeData(brightness: Brightness.light, primarySwatch: Colors.deepPurple),
-// //         // darkTheme: ThemeData(brightness: Brightness.dark, primarySwatch: Colors.deepPurple),
-// //         // themeMode: ThemeMode.system, // Or ThemeMode.light, ThemeMode.dark
-// //       ),
-// //       home: Scaffold(
-// //         appBar: AppBar(
-// //           title: const Text('My Portfolio'),
-// //         ),
-// //         body: SingleChildScrollView(
-// //           padding: const EdgeInsets.all(16.0),
-// //           child: Center(
-// //             child: ConstrainedBox(
-// //               constraints: const BoxConstraints(maxWidth: 1000), // Max width for larger screens
-// //               child: const SkillsAndExperienceSection(),
-// //             ),
-// //           ),
-// //         ),
-// //       ),
-// //     );
-// //   }
-// // }
