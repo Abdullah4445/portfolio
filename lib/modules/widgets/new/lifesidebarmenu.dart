@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -21,7 +22,6 @@ class LeftSidebarMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bool isDark = themeMode == ThemeMode.dark;
-    final Color sidebarBgColor = isDark ? Colors.grey[850]! : Colors.grey[200]!;
     final Color textColor = isDark ? Colors.white : Colors.black;
     final Color selectedItemBgColor = Colors.orange;
 
@@ -43,9 +43,32 @@ class LeftSidebarMenu extends StatelessWidget {
       ],
     ).value;
 
-    return Container(
+    return ClipRect(
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
+        child: Container(
       width: sidebarWidth,
-      color: sidebarBgColor,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: isDark
+              ? [
+                  Colors.white.withOpacity(0.08),
+                  Colors.white.withOpacity(0.03),
+                ]
+              : [
+                  Colors.white.withOpacity(0.55),
+                  Colors.white.withOpacity(0.30),
+                ],
+        ),
+        border: Border(
+          right: BorderSide(
+            color: Colors.white.withOpacity(isDark ? 0.14 : 0.6),
+            width: 1.2,
+          ),
+        ),
+      ),
       child: Column(
         children: [
           // Profile Image
@@ -108,6 +131,8 @@ class LeftSidebarMenu extends StatelessWidget {
             ),
           ),
         ],
+      ),
+        ),
       ),
     );
   }

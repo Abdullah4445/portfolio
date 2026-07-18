@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -81,35 +82,54 @@ class IntroTexts extends StatelessWidget {
             ),
             const SizedBox(height: 5),
 
-            // Programmer with animated style
+            // Animated rotating roles
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    accentColor.withOpacity(0.9),
-                    accentColor.withOpacity(0.7),
+                    accentColor.withOpacity(0.95),
+                    Colors.deepOrange.withOpacity(0.85),
                   ],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(14),
                 boxShadow: [
                   BoxShadow(
-                    color: accentColor.withOpacity(0.3),
-                    blurRadius: 10,
-                    offset: const Offset(0, 4),
+                    color: accentColor.withOpacity(0.35),
+                    blurRadius: 16,
+                    offset: const Offset(0, 6),
                   ),
                 ],
               ),
-              child: Text(
-                "PROGRAMMER",
-                style: GoogleFonts.poppins(
-                  fontSize: introFontSize * 0.35,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.white,
-                  letterSpacing: 2.0,
-                ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(Icons.terminal_rounded,
+                      color: Colors.white, size: 18),
+                  const SizedBox(width: 10),
+                  DefaultTextStyle(
+                    style: GoogleFonts.poppins(
+                      fontSize: introFontSize * 0.32,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                      letterSpacing: 1.6,
+                    ),
+                    child: AnimatedTextKit(
+                      repeatForever: true,
+                      pause: const Duration(milliseconds: 900),
+                      animatedTexts: [
+                        TypewriterAnimatedText('FLUTTER DEVELOPER',
+                            speed: const Duration(milliseconds: 90)),
+                        TypewriterAnimatedText('MOBILE APP DEVELOPER',
+                            speed: const Duration(milliseconds: 90)),
+                        TypewriterAnimatedText('UI / UX ENTHUSIAST',
+                            speed: const Duration(milliseconds: 90)),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
@@ -154,7 +174,7 @@ class IntroTexts extends StatelessWidget {
                     color: Colors.white.withOpacity(0.2),
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(
+                  child: const FaIcon(
                     FontAwesomeIcons.whatsapp,
                     color: Colors.white,
                     size: 22,

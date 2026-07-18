@@ -10,6 +10,7 @@ import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
+import '../../core/liquid_glass.dart';
 import '../widgets/new/fixedrightcircularmenu.dart';
 import '../widgets/new/lifesidebarmenu.dart';
 import 'contact/contact.dart';
@@ -38,7 +39,10 @@ class _PortfolioScreenState extends State<PortfolioScreen> {
           });
 
           return Scaffold(
-            body: Stack(
+            backgroundColor: Colors.transparent,
+            body: LiquidBackground(
+              isDark: isDarkTheme,
+              child: Stack(
               children: [
                 // Main Scrollable Content
                 Positioned.fill(
@@ -137,6 +141,7 @@ class _PortfolioScreenState extends State<PortfolioScreen> {
                   ),
                 ),
               ],
+            ),
             ),
           );
         },

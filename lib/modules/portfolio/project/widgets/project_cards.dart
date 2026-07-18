@@ -1,3 +1,4 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -26,17 +27,19 @@ class ProjectCard extends StatelessWidget {
       child: Container(
         width: 300, // 👈 important for carousel
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: Colors.white.withOpacity(0.25), width: 1.2),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.15),
-              blurRadius: 8,
-              offset: const Offset(0, 4),
+              color: Colors.black.withOpacity(0.35),
+              blurRadius: 30,
+              spreadRadius: -6,
+              offset: const Offset(0, 16),
             )
           ],
         ),
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(20),
           child: Stack(
             children: [
               Positioned.fill(
@@ -60,13 +63,25 @@ class ProjectCard extends StatelessWidget {
                 bottom: 0,
                 left: 0,
                 right: 0,
-                child: Container(
+                child: ClipRect(
+                  child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 12, sigmaY: 12),
+                  child: Container(
                   padding: const EdgeInsets.all(16),
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Colors.black54, Colors.transparent],
+                      colors: [
+                        Colors.black.withOpacity(0.55),
+                        Colors.black.withOpacity(0.15),
+                      ],
                       begin: Alignment.bottomCenter,
                       end: Alignment.topCenter,
+                    ),
+                    border: Border(
+                      top: BorderSide(
+                        color: Colors.white.withOpacity(0.18),
+                        width: 1,
+                      ),
                     ),
                   ),
                   child: Column(
@@ -108,6 +123,8 @@ class ProjectCard extends StatelessWidget {
                       )
                     ],
                   ),
+                ),
+                ),
                 ),
               ),
             ],

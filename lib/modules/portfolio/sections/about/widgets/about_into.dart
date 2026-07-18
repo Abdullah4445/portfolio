@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AboutIntro extends StatelessWidget {
   final ThemeMode themeMode;
@@ -143,12 +142,12 @@ class AboutIntro extends StatelessWidget {
             spacing: 12,
             runSpacing: 12,
             children: [
-              _buildSkillChip("Flutter", FontAwesomeIcons.mobile, primaryColor),
-              _buildSkillChip("Firebase", FontAwesomeIcons.fireFlameCurved, Colors.orange),
-              _buildSkillChip("REST APIs", FontAwesomeIcons.code, Colors.green),
-              _buildSkillChip("UI/UX Design", FontAwesomeIcons.paintBrush, Colors.purple),
-              _buildSkillChip("Bluetooth", FontAwesomeIcons.bluetooth, Colors.blue),
-              _buildSkillChip("Authentication", FontAwesomeIcons.shieldAlt, Colors.red),
+              _buildSkillChip("Flutter", Icons.phone_android, primaryColor),
+              _buildSkillChip("Firebase", Icons.local_fire_department, Colors.orange),
+              _buildSkillChip("REST APIs", Icons.code, Colors.green),
+              _buildSkillChip("UI/UX Design", Icons.brush, Colors.purple),
+              _buildSkillChip("Bluetooth", Icons.bluetooth, Colors.blue),
+              _buildSkillChip("Authentication", Icons.shield, Colors.red),
             ],
           ),
 

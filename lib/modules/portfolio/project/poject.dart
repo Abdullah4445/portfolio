@@ -369,7 +369,7 @@ class _ProjectSectionState extends State<ProjectSection> {
                       ),
                     ],
                   ),
-                  child: const Icon(
+                  child: const FaIcon(
                     FontAwesomeIcons.github,
                     color: Colors.white,
                     size: 28,
@@ -415,7 +415,7 @@ class _ProjectSectionState extends State<ProjectSection> {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Icon(FontAwesomeIcons.arrowUpRightFromSquare, size: 16),
+                      const Icon(Icons.open_in_new, size: 16),
                       const SizedBox(width: 8),
                       Text(
                         "View GitHub",

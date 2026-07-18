@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
+import '../../../core/liquid_glass.dart';
+
 class FixedRightCircularMenu extends StatelessWidget {
   final int selectedIndex;
   final Function(int) onItemSelected;
@@ -61,27 +63,34 @@ class FixedRightCircularMenu extends StatelessWidget {
 
     return Container(
       alignment: Alignment.centerRight,
-      width: menuWidth,
-      height: menuHeight,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          _buildMenuItem(Icons.home, 0, circleBgColor, selectedCircleColor, circleSize, iconSize),
-          _buildMenuItem(Icons.person, 1, circleBgColor, selectedCircleColor, circleSize, iconSize),
-          _buildMenuItem(Icons.code, 2, circleBgColor, selectedCircleColor, circleSize, iconSize),
-          _buildMenuItem(Icons.folder_open, 3, circleBgColor, selectedCircleColor, circleSize, iconSize),
-          _buildMenuItem(Icons.mail, 4, circleBgColor, selectedCircleColor, circleSize, iconSize),
-          // Theme Toggle at the bottom of the right menu
-          IconButton(
-            icon: Icon(
-              isDark ? Icons.light_mode : Icons.dark_mode,
-              color: isDark ? Colors.white : Colors.grey[400],
-              size: iconSize,
+      padding: const EdgeInsets.only(right: 14),
+      child: LiquidGlass(
+        isDark: isDark,
+        borderRadius: menuWidth,
+        blur: 20,
+        width: menuWidth * 0.9,
+        height: menuHeight,
+        padding: const EdgeInsets.symmetric(vertical: 14),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            _buildMenuItem(Icons.home, 0, circleBgColor, selectedCircleColor, circleSize, iconSize),
+            _buildMenuItem(Icons.person, 1, circleBgColor, selectedCircleColor, circleSize, iconSize),
+            _buildMenuItem(Icons.code, 2, circleBgColor, selectedCircleColor, circleSize, iconSize),
+            _buildMenuItem(Icons.folder_open, 3, circleBgColor, selectedCircleColor, circleSize, iconSize),
+            _buildMenuItem(Icons.mail, 4, circleBgColor, selectedCircleColor, circleSize, iconSize),
+            // Theme Toggle at the bottom of the right menu
+            IconButton(
+              icon: Icon(
+                isDark ? Icons.light_mode : Icons.dark_mode,
+                color: isDark ? Colors.white : Colors.grey[700],
+                size: iconSize,
+              ),
+              onPressed: onToggleTheme,
+              tooltip: isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode',
             ),
-            onPressed: onToggleTheme,
-            tooltip: isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode',
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

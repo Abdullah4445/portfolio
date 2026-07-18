@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'fun_facts.dart';
 import 'service_card.dart';
 
@@ -36,21 +35,21 @@ class AboutServicesAndFacts extends StatelessWidget {
             ServiceCard(
               title: 'Flutter Development',
               description: 'Building high-performance cross-platform apps for Android, iOS, and Web with modern Flutter architecture.',
-              icon: FontAwesomeIcons.mobileScreen,
+              icon: Icons.phone_android,
               themeMode: themeMode,
               gradientColors: [primaryColor, Colors.deepOrange],
             ),
             ServiceCard(
               title: 'Firebase Integration',
               description: 'Seamless integration of real-time databases, authentication, cloud storage, and push notifications.',
-              icon: FontAwesomeIcons.cloud,
+              icon: Icons.cloud,
               themeMode: themeMode,
               gradientColors: [Colors.blue, Colors.lightBlue],
             ),
             ServiceCard(
               title: 'UI/UX Design',
               description: 'Creating stunning, responsive interfaces with smooth animations and professional design principles.',
-              icon: FontAwesomeIcons.paintBrush,
+              icon: Icons.brush,
               themeMode: themeMode,
               gradientColors: [Colors.purple, Colors.purpleAccent],
             ),
@@ -107,28 +106,28 @@ class AboutServicesAndFacts extends StatelessWidget {
               FunFactCard(
                 number: '1+',
                 text: 'Years\nExperience',
-                icon: FontAwesomeIcons.clock,
+                icon: Icons.schedule,
                 color: primaryColor,
                 themeMode: themeMode,
               ),
               FunFactCard(
                 number: '4+',
                 text: 'Projects\nCompleted',
-                icon: FontAwesomeIcons.tasks,
+                icon: Icons.task_alt,
                 color: Colors.green,
                 themeMode: themeMode,
               ),
               FunFactCard(
                 number: '100%',
                 text: 'Client\nSatisfaction',
-                icon: FontAwesomeIcons.solidStar,
+                icon: Icons.star,
                 color: Colors.amber,
                 themeMode: themeMode,
               ),
               FunFactCard(
                 number: '10k+',
                 text: 'Lines of\nFlutter Code',
-                icon: FontAwesomeIcons.code,
+                icon: Icons.code,
                 color: Colors.blue,
                 themeMode: themeMode,
               ),

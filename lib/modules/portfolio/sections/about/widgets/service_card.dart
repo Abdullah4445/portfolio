@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../../../core/liquid_glass.dart';
+
 class ServiceCard extends StatelessWidget {
   final String title;
   final String description;
@@ -18,26 +20,32 @@ class ServiceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bool isDark = themeMode == ThemeMode.dark;
-    final Color backgroundColor = isDark ? Colors.grey[900]! : Colors.grey[100]!;
-    final Color textColor = isDark ? Colors.white70 : Colors.black87;
+    final Color textColor = isDark ? Colors.white : Colors.black87;
 
-    return Container(
+    return LiquidGlass(
+      isDark: isDark,
       width: 300,
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: backgroundColor,
-        borderRadius: BorderRadius.circular(12),
-      ),
+      borderRadius: 20,
+      padding: const EdgeInsets.all(20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(icon, size: 32, color: Colors.orange[700]),
-          const SizedBox(height: 12),
+          Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: Colors.orange.withOpacity(0.15),
+              borderRadius: BorderRadius.circular(14),
+              border: Border.all(color: Colors.orange.withOpacity(0.4)),
+            ),
+            child: Icon(icon, size: 30, color: Colors.orange[700]),
+          ),
+          const SizedBox(height: 16),
           Text(
             title,
             style: GoogleFonts.poppins(
               fontSize: 18,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w700,
               color: textColor,
             ),
           ),
@@ -46,7 +54,7 @@ class ServiceCard extends StatelessWidget {
             description,
             style: GoogleFonts.poppins(
               fontSize: 14,
-              color: textColor.withOpacity(0.8),
+              color: textColor.withOpacity(0.75),
               height: 1.4,
             ),
           ),

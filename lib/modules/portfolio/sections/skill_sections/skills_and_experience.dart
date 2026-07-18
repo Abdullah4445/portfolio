@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/modules/portfolio/sections/skill_sections/widgets/personal_skillbar.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'section_header.dart';
 import 'widgets/circular_skill_indicator.dart';
@@ -181,7 +180,7 @@ class SkillsAndExperienceSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _buildEnhancedSectionHeader(
-          icon: FontAwesomeIcons.graduationCap,
+          icon: Icons.school,
           title: 'Education Journey',
           subtitle: 'My Learning Path',
           color: Colors.deepOrange,
@@ -196,7 +195,7 @@ class SkillsAndExperienceSection extends StatelessWidget {
           textColor: textColor,
           secondaryTextColor: secondaryTextColor,
           tertiaryTextColor: tertiaryTextColor,
-          icon: FontAwesomeIcons.bookOpen,
+          icon: Icons.menu_book,
           gradientColors: [Colors.blue, Colors.lightBlue],
         ),
         const SizedBox(height: 20),
@@ -209,7 +208,7 @@ class SkillsAndExperienceSection extends StatelessWidget {
           textColor: textColor,
           secondaryTextColor: secondaryTextColor,
           tertiaryTextColor: tertiaryTextColor,
-          icon: FontAwesomeIcons.mobile,
+          icon: Icons.phone_android,
           gradientColors: [Colors.green, Colors.lightGreen],
         ),
         const SizedBox(height: 20),
@@ -222,7 +221,7 @@ class SkillsAndExperienceSection extends StatelessWidget {
           textColor: textColor,
           secondaryTextColor: secondaryTextColor,
           tertiaryTextColor: tertiaryTextColor,
-          icon: FontAwesomeIcons.rocket,
+          icon: Icons.rocket_launch,
           gradientColors: [Colors.purple, Colors.purpleAccent],
         ),
       ],
@@ -237,7 +236,7 @@ class SkillsAndExperienceSection extends StatelessWidget {
       children: [
         // Personal Skills
         _buildEnhancedSectionHeader(
-          icon: FontAwesomeIcons.userTie,
+          icon: Icons.person,
           title: 'Personal Skills',
           subtitle: 'Soft Skills & Attributes',
           color: Colors.blueAccent,
@@ -261,7 +260,7 @@ class SkillsAndExperienceSection extends StatelessWidget {
                 progress: 0.9,
                 textColor: textColor,
                 progressBackgroundColor: progressBackgroundColor,
-                icon: FontAwesomeIcons.clock,
+                icon: Icons.schedule,
                 color: Colors.green,
               ),
               const SizedBox(height: 16),
@@ -270,7 +269,7 @@ class SkillsAndExperienceSection extends StatelessWidget {
                 progress: 0.85,
                 textColor: textColor,
                 progressBackgroundColor: progressBackgroundColor,
-                icon: FontAwesomeIcons.arrowsRotate,
+                icon: Icons.sync,
                 color: Colors.orange,
               ),
               const SizedBox(height: 16),
@@ -279,7 +278,7 @@ class SkillsAndExperienceSection extends StatelessWidget {
                 progress: 0.95,
                 textColor: textColor,
                 progressBackgroundColor: progressBackgroundColor,
-                icon: FontAwesomeIcons.peopleGroup,
+                icon: Icons.groups,
                 color: Colors.blue,
               ),
               const SizedBox(height: 16),
@@ -288,7 +287,7 @@ class SkillsAndExperienceSection extends StatelessWidget {
                 progress: 0.88,
                 textColor: textColor,
                 progressBackgroundColor: progressBackgroundColor,
-                icon: FontAwesomeIcons.comments,
+                icon: Icons.forum,
                 color: Colors.purple,
               ),
             ],
@@ -299,7 +298,7 @@ class SkillsAndExperienceSection extends StatelessWidget {
 
         // Technical Skills
         _buildEnhancedSectionHeader(
-          icon: FontAwesomeIcons.code,
+          icon: Icons.code,
           title: 'Technical Skills',
           subtitle: 'Programming & Tools',
           color: Colors.green,
@@ -328,7 +327,7 @@ class SkillsAndExperienceSection extends StatelessWidget {
                     colors: const [Colors.blue, Colors.lightBlueAccent, Colors.cyan],
                     textColor: textColor,
                     progressBackgroundColor: progressBackgroundColor,
-                    icon: FontAwesomeIcons.mobile,
+                    icon: Icons.phone_android,
                   ),
                   CircularSkillIndicator(
                     skillName: 'Dart',
@@ -336,7 +335,7 @@ class SkillsAndExperienceSection extends StatelessWidget {
                     colors: const [Colors.teal, Colors.greenAccent, Colors.lightGreen],
                     textColor: textColor,
                     progressBackgroundColor: progressBackgroundColor,
-                    icon: FontAwesomeIcons.code,
+                    icon: Icons.code,
                   ),
                   CircularSkillIndicator(
                     skillName: 'Firebase',
@@ -344,7 +343,7 @@ class SkillsAndExperienceSection extends StatelessWidget {
                     colors: const [Colors.orange, Colors.deepOrangeAccent, Colors.redAccent],
                     textColor: textColor,
                     progressBackgroundColor: progressBackgroundColor,
-                    icon: FontAwesomeIcons.fire,
+                    icon: Icons.local_fire_department,
                   ),
                 ],
               ),
@@ -360,7 +359,7 @@ class SkillsAndExperienceSection extends StatelessWidget {
                     colors: const [Colors.purple, Colors.deepPurpleAccent, Colors.pink],
                     textColor: textColor,
                     progressBackgroundColor: progressBackgroundColor,
-                    icon: FontAwesomeIcons.cloud,
+                    icon: Icons.cloud,
                   ),
                   CircularSkillIndicator(
                     skillName: 'Git',
@@ -368,7 +367,7 @@ class SkillsAndExperienceSection extends StatelessWidget {
                     colors: const [Colors.grey, Colors.blueGrey, Colors.black54],
                     textColor: textColor,
                     progressBackgroundColor: progressBackgroundColor,
-                    icon: FontAwesomeIcons.gitAlt,
+                    icon: Icons.commit,
                   ),
                   CircularSkillIndicator(
                     skillName: 'UI/UX',
@@ -376,7 +375,7 @@ class SkillsAndExperienceSection extends StatelessWidget {
                     colors: const [Colors.amber, Colors.yellowAccent, Colors.lime],
                     textColor: textColor,
                     progressBackgroundColor: progressBackgroundColor,
-                    icon: FontAwesomeIcons.paintBrush,
+                    icon: Icons.brush,
                   ),
                 ],
               ),
